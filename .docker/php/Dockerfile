@@ -52,4 +52,4 @@ WORKDIR /root
 RUN git clone https://github.com/seebi/dircolors-solarized
 
 EXPOSE 5173
-WORKDIR /var/www
+WORKDIR /var/www/docker
