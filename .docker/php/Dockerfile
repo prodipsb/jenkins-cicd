@@ -39,5 +39,10 @@ RUN composer config --global process-timeout 3600 \
 # Set the working directory
 WORKDIR /var/www
 
+# Ensure the storage and bootstrap cache directories are writable
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+
+
 # Expose required ports
 EXPOSE 5173
